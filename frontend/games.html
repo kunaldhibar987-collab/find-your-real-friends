@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<base href="/">
+<title>Friend Games · Find Your Real Friend</title>
+<link rel="stylesheet" href="assets/ui-kit/typography/fonts.css">
+<link rel="stylesheet" href="assets/ui-kit/background/background.css">
+<link rel="stylesheet" href="assets/ui-kit/navbar/navbar.css">
+<link rel="stylesheet" href="assets/ui-kit/cards/cards.css">
+<link rel="stylesheet" href="assets/ui-kit/buttons/buttons.css">
+<link rel="stylesheet" href="assets/ui-kit/objects/objects.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+<div class="cute-world" aria-hidden="true">
+  <div class="world-blob blob-a"></div><div class="world-blob blob-b"></div><div class="world-blob blob-c"></div><div class="world-blob blob-d"></div>
+  <div class="cloud cloud-1"></div><div class="cloud cloud-2"></div><div class="cloud cloud-3"></div>
+  <div class="sparkle s-1"></div><div class="sparkle s-2"></div><div class="sparkle s-3"></div><div class="sparkle s-4"></div>
+  <div class="bubble b-1"></div><div class="bubble b-2"></div><div class="bubble b-3"></div>
+</div>
+<header class="site-header">
+  <div class="navbar-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span><span><span class="brand-name">Find Your Real Friend</span><br><span class="brand-sub">Friendship Quiz World</span></span></a>
+    <nav class="desktop-navigation" aria-label="Main navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="create-quiz.html">Create Quiz</a><a class="nav-link" href="scoreboard.html">My Dashboard</a></nav>
+    <a class="header-create-button" href="create-quiz.html">Create Quiz</a>
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mobileNavigation"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-navigation" id="mobileNavigation" aria-label="Mobile navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="create-quiz.html">Create Quiz</a><a class="nav-link" href="scoreboard.html">My Dashboard</a></nav>
+</header>
+<main class="games-page" id="gamesPage">
+<section class="games-locked scrapbook-card" id="gamesLocked" hidden>
+  <div class="secret-lock-badge">🔐 FRIEND SURPRISE</div>
+  <h1>This Play Corner is a secret 💜</h1>
+  <p>These games are a special surprise for friends who score <strong>more than 5</strong> in the friendship quiz.</p>
+  <a class="button purple" href="index.html">Back to Home</a>
+</section>
+
+  <section class="games-hero scrapbook-card">
+    <div class="game-hero-copy"><span class="mini-ribbon">FRIEND GAME ZONE</span><h1>Play Corner</h1><p>Score more than 5 in the friendship quiz and unlock a whole toy-box of offline mini games. Multiplayer-style games use local bots only — no game data is sent to the backend.</p><div class="game-stat-row"><div><strong>12+</strong><span>mini games</span></div><div><strong>5+</strong><span>score unlock</span></div><div><strong>0</strong><span>game API calls</span></div></div></div>
+    <div class="game-mascot"><div class="mascot-head"></div><div class="mascot-body"></div><span class="mascot-heart">♥</span></div>
+  </section>
+
+  <section class="game-filter-bar cute-card"><button class="filter-btn active" data-filter="all">All Games</button><button class="filter-btn" data-filter="bot">Bot Battles</button><button class="filter-btn" data-filter="solo">Solo Games</button><span id="gameUnlockText">Private reward · unlocked at 6+ correct answers.</span></section>
+
+  <section class="game-grid" id="gameGrid">
+    <article class="game-card scrapbook-card" data-game="ludo" data-type="bot"><div class="game-icon ludo-icon"><i></i><i></i><i></i><i></i></div><span class="game-tag bot-tag">BOT</span><h2>Ludo Dash</h2><p>Roll, move and race against three automatic bot pawns.</p><button class="game-launch" data-open="ludo">Play Ludo</button></article>
+    <article class="game-card scrapbook-card" data-game="carrom" data-type="bot"><div class="game-icon carrom-icon"><span></span></div><span class="game-tag bot-tag">BOT</span><h2>Carrom Clash</h2><p>Take your shot while a tiny bot takes its own automatic turns.</p><button class="game-launch" data-open="carrom">Play Carrom</button></article>
+    <article class="game-card scrapbook-card" data-game="snakes" data-type="bot"><div class="game-icon snake-icon">S</div><span class="game-tag bot-tag">BOT</span><h2>Snakes &amp; Ladders</h2><p>Race to 100. You roll first; the bot keeps moving by itself.</p><button class="game-launch" data-open="snakes">Play Race</button></article>
+    <article class="game-card scrapbook-card" data-game="tictactoe" data-type="bot"><div class="game-icon tic-icon"><span>X</span><span>O</span></div><span class="game-tag bot-tag">BOT</span><h2>Tic-Tac-Toe</h2><p>Make a line of three while the friendly bot answers automatically.</p><button class="game-launch" data-open="tictactoe">Play XO</button></article>
+    <article class="game-card scrapbook-card" data-game="chess" data-type="bot"><div class="game-icon chess-icon">♞</div><span class="game-tag bot-tag">BOT</span><h2>Mini Chess</h2><p>A lightweight chess board with a simple automatic opponent.</p><button class="game-launch" data-open="chess">Play Chess</button></article>
+    <article class="game-card scrapbook-card" data-game="memory" data-type="solo"><div class="game-icon memory-icon"><span></span><span></span><span></span><span></span></div><span class="game-tag solo-tag">SOLO</span><h2>Memory Match</h2><p>Flip cards and match all the hidden pairs in as few turns as possible.</p><button class="game-launch" data-open="memory">Play Memory</button></article>
+    <article class="game-card scrapbook-card" data-game="colors" data-type="solo"><div class="game-icon colors-icon"><i></i><i></i><i></i><i></i></div><span class="game-tag solo-tag">SOLO</span><h2>Color Blocks</h2><p>Match neighboring blocks before the board fills with bright colors.</p><button class="game-launch" data-open="colors">Play Blocks</button></article>
+    <article class="game-card scrapbook-card" data-game="fruit" data-type="solo"><div class="game-icon fruit-icon">✦</div><span class="game-tag solo-tag">SOLO</span><h2>Fruit March</h2><p>Slice flying fruit targets before they leave the play zone.</p><button class="game-launch" data-open="fruit">Slice Fruit</button></article>
+    <article class="game-card scrapbook-card" data-game="basket" data-type="solo"><div class="game-icon basket-icon"><span></span></div><span class="game-tag solo-tag">SOLO</span><h2>Basketball Hoops</h2><p>Tap the ball to launch it through the moving hoop and build a streak.</p><button class="game-launch" data-open="basket">Shoot Hoops</button></article>
+    <article class="game-card scrapbook-card" data-game="spin" data-type="solo"><div class="game-icon spin-icon">↻</div><span class="game-tag solo-tag">SOLO</span><h2>Spin Wheel</h2><p>Spin the colorful wheel and collect a random mini challenge score.</p><button class="game-launch" data-open="spin">Spin It</button></article>
+    <article class="game-card scrapbook-card" data-game="slots" data-type="solo"><div class="game-icon slots-icon"><span>7</span><span>★</span><span>7</span></div><span class="game-tag solo-tag">SOLO</span><h2>Slot Cars</h2><p>Time your boost and keep the tiny car on the track for three laps.</p><button class="game-launch" data-open="slots">Race Cars</button></article>
+    <article class="game-card scrapbook-card" data-game="snake" data-type="solo"><div class="game-icon nokia-icon">◆</div><span class="game-tag solo-tag">SOLO</span><h2>Classic Snake</h2><p>Grow the snake by eating dots. Keyboard arrows or WASD work on desktop.</p><button class="game-launch" data-open="snake">Play Snake</button></article>
+    <article class="game-card scrapbook-card" data-game="knife" data-type="solo"><div class="game-icon knife-icon"><span></span></div><span class="game-tag solo-tag">SOLO</span><h2>Fruit Knife</h2><p>Throw knives into the rotating target without hitting another knife.</p><button class="game-launch" data-open="knife">Throw Knife</button></article>
+  </section>
+</main>
+
+<div class="game-modal" id="gameModal" aria-hidden="true"><div class="game-modal-backdrop" data-close-game></div><section class="game-modal-card" role="dialog" aria-modal="true"><button class="game-close" id="closeGame" aria-label="Close game">×</button><div class="game-modal-head"><span class="mini-ribbon" id="modalTag">OFFLINE GAME</span><h2 id="modalTitle">Game</h2><p id="modalSubtitle">Ready?</p></div><div id="gameStage" class="game-stage"></div></section></div>
+<script src="js/site.js"></script><script src="js/games.js"></script>
+</body></html>

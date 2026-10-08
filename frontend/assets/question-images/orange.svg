@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="150" viewBox="0 0 240 150">
+<rect width="240" height="150" rx="28" fill="#f7eafd"/>
+<path d="M15 22h210M15 128h210" stroke="#d89de7" stroke-width="3" stroke-dasharray="6 7"/>
+<circle cx="120" cy="76" r="48" fill="#f29b45" stroke="#fff" stroke-width="8"/><circle cx="104" cy="60" r="10" fill="rgba(255,255,255,.55)"/>
+<text x="120" y="133" text-anchor="middle" font-family="Trebuchet MS,Arial" font-size="14" font-weight="700" fill="#49365f">Orange</text>
+</svg>

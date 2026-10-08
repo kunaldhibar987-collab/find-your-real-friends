@@ -1,0 +1,19 @@
+
+.button {
+    border: 0;
+    border-radius: 17px;
+    padding: 13px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 7px 0 rgba(55,34,88,.25), 0 13px 25px rgba(70,48,110,.14);
+    transition: transform .16s ease, box-shadow .16s ease, filter .2s ease;
+}
+.button:hover { transform: translateY(-3px); filter: brightness(1.04); }
+.button:active { transform: translateY(4px); box-shadow: 0 3px 0 rgba(55,34,88,.25); }
+.button.pink { background: linear-gradient(135deg,#e92d73,#ff5e9b); }
+.button.purple { background: linear-gradient(135deg,#7044df,#9a65ff); }
+.button.blue { background: linear-gradient(135deg,#277de0,#39b8ff); }
+.button.green { background: linear-gradient(135deg,#16a56b,#55d99c); }
+.button.orange { background: linear-gradient(135deg,#ef7b28,#ffb23e); }

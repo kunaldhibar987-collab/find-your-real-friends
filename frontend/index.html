@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Find Your Real Friend</title>
+<link rel="stylesheet" href="assets/ui-kit/typography/fonts.css">
+<link rel="stylesheet" href="assets/ui-kit/background/background.css">
+<link rel="stylesheet" href="assets/ui-kit/navbar/navbar.css">
+<link rel="stylesheet" href="assets/ui-kit/cards/cards.css">
+<link rel="stylesheet" href="assets/ui-kit/buttons/buttons.css">
+<link rel="stylesheet" href="assets/ui-kit/objects/objects.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cute-world" aria-hidden="true">
+    <div class="world-blob blob-a"></div><div class="world-blob blob-b"></div>
+    <div class="world-blob blob-c"></div><div class="world-blob blob-d"></div>
+    <div class="cloud cloud-1"></div><div class="cloud cloud-2"></div><div class="cloud cloud-3"></div>
+    <div class="sparkle s-1"></div><div class="sparkle s-2"></div><div class="sparkle s-3"></div><div class="sparkle s-4"></div>
+    <div class="bubble b-1"></div><div class="bubble b-2"></div><div class="bubble b-3"></div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="navbar-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">♥</span><span><span class="brand-name">Find Your Real Friend</span><br><span class="brand-sub">Friendship Quiz World</span></span></a>
+    <nav class="desktop-navigation" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="create-quiz.html">Create Quiz</a>
+      <a class="nav-link" href="scoreboard.html">My Dashboard</a>
+    </nav>
+    <a class="header-create-button" href="create-quiz.html">Create Quiz</a>
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mobileNavigation"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-navigation" id="mobileNavigation" aria-label="Mobile navigation">
+    <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="create-quiz.html">Create Quiz</a><a class="nav-link" href="scoreboard.html">My Dashboard</a>
+  </nav>
+</header>
+
+<main class="page-shell">
+<section class="hero">
+    <div>
+        <h1>Find Your <span>Real Friend</span> 💗</h1>
+        <p>Create a fun friendship quiz, send it to someone special, and discover how well they really know you.</p>
+        <div class="hero-actions">
+            <a class="button pink" href="create-quiz.html">Create My Quiz</a>
+            <a class="button purple" href="#how">See How It Works</a>
+        </div>
+    </div>
+    <div class="hero-art">
+        <div class="friend-orbit"></div>
+        <div class="hero-mini-card cute-card"><strong>10–15 Questions</strong><br>Choose your own answers and challenge your friend.</div>
+    </div>
+</section>
+
+<section id="how">
+    <div class="section-title"><h2>How the Friendship Game Works</h2><p>Simple for the creator, fun for the friend.</p></div>
+    <div class="feature-grid">
+        <article class="feature cute-card"><div class="icon pink">1</div><h3>Create</h3><p>Pick your gender, choose questions, and select your real answer from a large answer bank.</p></article>
+        <article class="feature cute-card"><div class="icon blue">2</div><h3>Share</h3><p>Your quiz gets a unique link that you can send to your friend.</p></article>
+        <article class="feature cute-card"><div class="icon purple">3</div><h3>Discover</h3><p>Your friend gets exactly three answer choices for every question. Their score is saved automatically.</p></article>
+    </div>
+</section>
+
+<section id="myDashboard" class="story-section" style="display:none"><div class="section-title"><h2>My Dashboard 📊</h2><p id="homeDashboardText">Your saved quizzes and friend results.</p></div><div id="homeDashboard" class="dashboard-home-grid"></div><div style="text-align:center;margin-top:18px"><a class="button purple" href="scoreboard.html">Open Full Dashboard</a></div></section>
+</main>
+
+
+
+<section class="story-section">
+    <div class="section-title">
+        <h2>Make It Personal 💫</h2>
+        <p>Build a quiz around the tiny things your real friend should remember.</p>
+    </div>
+    <div class="feature-grid">
+        <article class="feature cute-card"><div class="icon pink">🍫</div><h3>Favorite Things</h3><p>Ask about chocolate, games, colors, food, music, hobbies and the little choices that make someone unique.</p></article>
+        <article class="feature cute-card"><div class="icon blue">🎮</div><h3>Three-Choice Challenge</h3><p>Your friend never sees the whole answer bank. Every question becomes a cute three-choice challenge.</p></article>
+        <article class="feature cute-card"><div class="icon purple">🏆</div><h3>Instant Friendship Score</h3><p>Answers are checked automatically and your result is saved so you can see how well they know you.</p></article>
+    </div>
+</section>
+<section class="score-guide cute-card">
+    <div class="section-title"><h2>What Does Your Score Mean?</h2><p>No complicated rules. Just friendship fun.</p></div>
+    <div class="score-pills">
+        <div class="score-pill very-good"><strong>10/10</strong><span>Very Good Friend</span></div>
+        <div class="score-pill good"><strong>7–9/10</strong><span>Good Friend</span></div>
+        <div class="score-pill average"><strong>5–6/10</strong><span>Average Friend</span></div>
+        <div class="score-pill fake"><strong>0–4/10</strong><span>Fake Friend 😭</span></div>
+    </div>
+</section>
+
+
+
+
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/site.js"></script><script>
+(async()=>{const token=getCreatorToken();if(!token)return;try{const d=await api("/dashboard?token="+encodeURIComponent(token));const sec=document.getElementById("myDashboard"),box=document.getElementById("homeDashboard");sec.style.display="block";document.getElementById("homeDashboardText").textContent="Welcome back, "+d.creator.name+". Your database-backed dashboard is ready on this device.";if(!d.quizzes.length){box.innerHTML='<article class="cute-card dashboard-home-quiz"><h3>No quiz created yet.</h3><a class="button pink" href="create-quiz.html">Create My Quiz</a></article>';return}box.innerHTML=d.quizzes.map(q=>{const rows=(q.attempts||[]).map(a=>{const sub=(q.submissions||[]).find(x=>x.friend_name===a.friend_name&&x.relationship===a.relationship);return '<tr><td><strong>'+escapeHtml(a.friend_name)+'</strong></td><td>'+escapeHtml(a.relationship)+'</td><td class="'+(a.status==='Completed'?'status-complete':'status-progress')+'">'+escapeHtml(a.status)+'</td><td>'+(sub?sub.score+'/'+sub.total:'—')+'</td><td>'+(sub?escapeHtml(sub.result):'Not submitted')+'</td><td>'+(sub?'<a class="button blue small-button" href="view-result.html?id='+sub.id+'">View</a> <button class="button red small-button home-remove" data-id="'+sub.id+'">Remove</button>':'<span>Waiting</span>')+'</td></tr>'}).join('');return '<article class="cute-card dashboard-home-quiz"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap"><div><h3>'+escapeHtml(q.title)+'</h3><p>Quiz code: <strong>'+escapeHtml(q.quiz_code)+'</strong> · '+(q.submissions||[]).length+' submitted</p></div><a class="button purple" href="/q/'+encodeURIComponent(q.quiz_code)+'">Open Quiz</a></div><div class="dashboard-home-table"><table class="score-table"><thead><tr><th>Name</th><th>Relationship</th><th>Status</th><th>Score</th><th>Result</th><th>Actions</th></tr></thead><tbody>'+(rows||'<tr><td colspan="6">No one has started this quiz yet.</td></tr>')+'</tbody></table></div></article>'}).join('');document.querySelectorAll('.home-remove').forEach(btn=>btn.onclick=async()=>{if(!confirm('Remove this result permanently?'))return;try{await api('/submissions/'+btn.dataset.id+'?token='+encodeURIComponent(token),{method:'DELETE'});location.reload()}catch(e){alert(e.message)}})}catch(e){}})();
+</script>
+</body>
+</html>

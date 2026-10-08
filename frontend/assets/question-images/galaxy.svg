@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="150" viewBox="0 0 240 150">
+<rect width="240" height="150" rx="28" fill="#f7eafd"/>
+<path d="M15 22h210M15 128h210" stroke="#d89de7" stroke-width="3" stroke-dasharray="6 7"/>
+<rect x="57" y="48" width="126" height="52" rx="14" fill="#6f4db8" stroke="#6b4b86" stroke-width="4"/><path d="M78 63h82" stroke="#fff" stroke-width="7" stroke-linecap="round"/><circle cx="173" cy="82" r="10" fill="#ffe38a"/>
+<text x="120" y="133" text-anchor="middle" font-family="Trebuchet MS,Arial" font-size="14" font-weight="700" fill="#49365f">Galaxy</text>
+</svg>
